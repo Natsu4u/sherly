@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    text-align: center;
+    padding: 50px;
+    color: white;
+    position: relative;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    max-width: 500px;
+    color: #ff4d6d;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hiasan bunga & hati di pinggir */
+.decor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.heart {
+    background-image: url('heart.png');
+}
+
+.flower {
+    background-image: url('flower.png');
+}
+
+/* Posisi hiasan */
+.decor1 { top: 10px; left: 10px; }
+.decor2 { top: 10px; right: 10px; }
+.decor3 { bottom: 10px; left: 10px; }
+.decor4 { bottom: 10px; right: 10px; }
+
+h1 {
+    color: #ff3366;
+    font-size: 28px;
+}
+
+.message {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.signature {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff3366;
+}
+
+button {
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #e62e5c;
+}
+
+.hidden {
+    display: none;
+}
+
+#media-container {
+    margin-top: 20px;
+}
+
+#valentine-video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine, Cheyyy!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 50px;
+            color: white;
+            position: relative;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            max-width: 500px;
+            color: #ff4d6d;
+            position: relative;
+            z-index: 1;
+        }
+        .decor {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .heart {
+            background-image: url('heart.png');
+        }
+        .flower {
+            background-image: url('flower.png');
+        }
+        .decor1 { top: 10px; left: 10px; }
+        .decor2 { top: 10px; right: 10px; }
+        .decor3 { bottom: 10px; left: 10px; }
+        .decor4 { bottom: 10px; right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decor heart decor1"></div>
+        <div class="decor flower decor2"></div>
+        <div class="decor heart decor3"></div>
+        <div class="decor flower decor4"></div>
+        
+        <h1>Happy Valentine's Day, Cheyy! 💖</h1>
+        <p class="message">sayang, selamat hari valentine ya. sebenernya gak perlu nunggu hari ini buat bilang aku sayang kamu, karena setiap hari aku juga ngerasain hal yang sama. tapi khusus hari ini, aku mau kamu tahu kalau aku bener-bener bersyukur punya kamu di hidup aku. makasih udah jadi bagian penting buat aku, makasih udah selalu ada. semoga kita selalu bareng-bareng ya. aku sayang kamu. ❤️
+
+
+
+
+
+
+
+</p>
+        <p class="signature">With love, Bevan</p>
+        <button onclick="startExperience()">Pencet deh</button>
+        
+        <div id="media-container" class="hidden">
+            <audio id="bg-music" loop>
+                <source src="valentine_song.mp3" type="audio/mp3">
+                Browser kamu tidak mendukung pemutaran audio.
+            </audio>
+
+            <video id="valentine-video" width="100%" controls>
+                <source src="valentine_video.mp4" type="video/mp4">
+                Browser kamu tidak mendukung pemutaran video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function startExperience() {
+            document.getElementById("media-container").classList.remove("hidden");
+            const audio = document.getElementById("bg-music");
+            audio.play().catch(error => console.log("Autoplay tidak didukung, user harus berinteraksi dulu."));
+
+            const video = document.getElementById("valentine-video");
+            video.addEventListener("play", () => audio.pause()); // Pause musik saat video diputar
+            video.addEventListener("pause", () => audio.play()); // Lanjutkan musik saat video dijeda
+        }
+    </script>
+</body>
+</html>
